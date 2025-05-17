@@ -77,6 +77,13 @@ h3 {
   display: block;
 }
 
+.more-animations {
+  background: #010101;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   main { padding: 1rem; }
 }

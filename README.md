@@ -1,5 +1,8 @@
 # Collatz Hypothesis
 
+[![Deploy on Vercel](https://vercel.com/button)](https://collatz-hypothesis.vercel.app/)  
+[Deployed on Vercel]
+
 The Collatz hypothesis (also known as the **3n + 1 problem** or the **Syracuse problem**) is a famous unsolved problem in mathematics, defined by a simple iterative process:
 
 ## Rules
