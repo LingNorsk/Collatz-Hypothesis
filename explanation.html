@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Balance-Based Approach to the Collatz Hypothesis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="license" content="MIT">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header>
+    <h1>A Balance-Based Approach to the Collatz Hypothesis</h1>
+    <p style="font-size:1.05rem;">
+      by <a href="https://github.com/LingNorsk" target="_blank" rel="noopener noreferrer"><strong>YEVGENIY S.</strong></a> &mdash; MIT License
+    </p>
+  </header>
+  <main>
+    <a href="index.html" style="color:#b80606; text-decoration:underline; display:inline-block; margin-bottom:1.5em;">
+      ← Back to Collatz Hypothesis
+    </a>
+
+    <h2>Abstract</h2>
+    <p>
+      We propose a conceptual framework for the Collatz hypothesis based on global balance in closed discrete systems.
+      This approach models the iterative process as a conservative exchange of "units" among elements, showing that unbounded trajectories are impossible without external input. The result is a universal principle that naturally leads to convergence or cycles within the Collatz dynamics.
+    </p>
+
+    <h2>Axioms and Setup</h2>
+    <ul>
+      <li>Consider a closed system of natural numbers: \( S = \{n_1, n_2, ..., n_k\} \).</li>
+      <li>At each step, for each \( n_i \):
+        <ul>
+          <li>If \( n_i \) is even: \( n_i \to n_i/2 \).</li>
+          <li>If \( n_i \) is odd: \( n_i \to 3n_i + 1 \).</li>
+        </ul>
+      </li>
+      <li>All changes occur <b>only</b> within the system; there are no external sources or sinks.</li>
+    </ul>
+
+    <h2>Operator of Change (Exchange Function)</h2>
+    <p>
+      For each time step \( t \), define the change for every \( n_i \):<br>
+      \( \Delta n_i^{(t)} = n_i^{(t+1)} - n_i^{(t)} \)
+    </p>
+
+    <h2>Global Balance Law</h2>
+    <p>
+      The sum of all changes in the system at every step is zero:<br>
+      \[
+        \sum_{i=1}^{k} \Delta n_i^{(t)} = 0
+      \]<br>
+      This models the conservation law: any increase for one element is balanced by an equal decrease elsewhere.
+    </p>
+
+    <h2>Consequence: No Unbounded Growth</h2>
+    <p>
+      Suppose, for contradiction, that some trajectory could grow without bound.
+      This would require a persistent influx of "units" for at least one \( n_j \).
+      But since the system is closed, these units must come from other elements, which are all natural numbers (non-negative).
+      Continued growth of one element necessarily depletes others, but no element can become negative.
+      Therefore, perpetual, unbounded growth is impossible.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      In any closed system governed by the Collatz rules and the global balance law, no unboundedly increasing trajectories can exist.
+      All dynamics must converge to a finite cycle or a stable point.
+    </p>
+
+    <h2>Theorem (Balance Formulation)</h2>
+    <blockquote>
+      In a closed discrete system where every change is internally balanced according to the Collatz process, all trajectories converge to a finite cycle or stabilize; unbounded growth is impossible.
+    </blockquote>
+
+    <h2>Notes</h2>
+    <ul>
+      <li>This is a principle-based explanation—if further formalized and connected with traditional number-theoretic tools, it may provide a pathway to a full proof of the Collatz conjecture.</li>
+      <li>The approach generalizes to any discrete process with a global conservation law.</li>
+    </ul>
+
+    <div class="contact">
+      <b>Author:</b> Yevgeniy S.<br>
+    </div>
+  </main>
+
+  <section class="more-animations">
+    <h2>More Animations</h2>
+    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin: 2em 0;">
+      <a href="https://my-balls.vercel.app/" target="_blank" style="display: block; text-align: center; color: #fff; width: 240px;">
+        <img 
+          src="https://image.thum.io/get/width/600/crop/https://my-balls.vercel.app/" 
+          alt="My Balls Animation" 
+          style="width: 100%; border-radius: 12px; box-shadow: 0 2px 12px #0004; margin-bottom: 0.5em;">
+        <div>My Balls Animation</div>
+      </a>
+      <!-- more soon -->
+    </div>
+    <p style="color:#3cff00; margin-top:1em;">
+      See my other public animations and other works &rarr;
+    </p>
+  </section>
+</body>
+</html>
