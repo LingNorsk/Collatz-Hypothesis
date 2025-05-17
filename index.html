@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Global Balance in Discrete Systems: A New View on the Collatz Hypothesis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="license" content="MIT">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>Global Balance and Dynamics in Closed Discrete Systems:<br>A New Perspective on the Collatz Hypothesis</h1>
+  <p style="font-size:1.05rem;">
+  by <a href="https://github.com/LingNorsk" target="_blank" rel="noopener noreferrer"><strong>  YEVGENIY S.  </strong></a> &mdash; MIT License
+</p>
+</header>
+<main>
+  <section class="license">
+    <strong>License:</strong> MIT. <br>
+    <em>This page and code may be used, copied, and adapted freely for any purpose.</em>
+  </section>
+
+  <section class="animation-demo" id="animation">
+  <div class="yin-yang-container">
+    <svg id="yinYang" width="200" height="200" viewBox="0 0 200 200" style="filter:url(#water)">
+  <defs>
+    <filter id="water">
+      <feTurbulence id="turb" baseFrequency="0.03 0.04" numOctaves="2" seed="2" result="turb"/>
+      <feDisplacementMap in2="turb" in="SourceGraphic" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g>
+    
+    <circle cx="100" cy="100" r="80" fill="#fff"/>
+    
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#222" stroke-width="2"/>
+    
+    <path id="yy-white" d="M100,20
+      A80,80 0 1,1 100,180
+      A40,40 0 1,0 100,100
+      A40,40 0 1,1 100,20
+      Z" fill="#fff"/>
+    
+    <path id="yy-black" d="M100,20
+      A80,80 0 1,0 100,180
+      A40,40 0 1,1 100,100
+      A40,40 0 1,0 100,20
+      Z" fill="#222"/>
+    <circle cx="100" cy="60" r="12" fill="#fff" id="yy-dot-white"/>
+    <circle cx="100" cy="140" r="12" fill="#222" id="yy-dot-black"/>
+  </g>
+</svg>
+  </div>
+</section>
+
+  <h2>Abstract</h2>
+  <p>
+    This note introduces a novel approach to the Collatz hypothesis, based on the principle of global balance in closed discrete systems.
+    We employ a ternary system of change (+1, 0, –1), viewing any "increase" as internal redistribution rather than the emergence of value from nothing. This framework allows for a fresh perspective on the Collatz problem and reveals universal laws for a broad class of discrete processes.
+  </p>
+
+  <h2>1. Introduction</h2>
+  <p>
+    The classical Collatz hypothesis is formulated as a simple iterative rule over natural numbers. Despite its apparent simplicity, it remains unsolved and continues to intrigue mathematicians. Here, we present an alternative approach—using the concept of internal exchange and ternary logic of change.
+  </p>
+
+  <h2>2. Axioms and Core Principles</h2>
+  <ol>
+    <li>
+      <strong>System Closure:</strong>
+      <br>
+      The set of natural numbers is treated as a closed system, with no external creation or annihilation of elementary units (resources, mass, or information).
+    </li>
+    <li>
+      <strong>Ternary Change Logic:</strong>
+      <br>
+      Each element can, at every step, experience one of three changes: increase (+1), decrease (–1), or stability (0).
+    </li>
+    <li>
+      <strong>Global Invariant:</strong>
+      <br>
+      At every step, the sum of all changes equals zero:
+      <pre>&sum;<sub>i</sub> &Delta;n<sub>i</sub> = 0, &nbsp; where &Delta;n<sub>i</sub> ∈ {–1, 0, +1}</pre>
+    </li>
+  </ol>
+
+  <h2>3. Reformulation of the Collatz Rule</h2>
+  <ul>
+    <li>For even elements: <code>n &rarr; n / 2</code>.</li>
+    <li>For odd elements: <code>n &rarr; 3n + 1</code>, where the "+1" is an internal redistribution, not an external addition.</li>
+    <li>Any gain for one element is offset by a corresponding loss elsewhere, preserving global balance.</li>
+  </ul>
+
+  <h2>4. Theoretical Result</h2>
+  <blockquote>
+    In any closed discrete system with fully balanced internal exchanges, unbounded increasing trajectories are impossible; all redistribution processes inevitably lead to stable cycles or fixed points.
+  </blockquote>
+  <p>
+    Applied to the Collatz hypothesis: all sequences must eventually reach a cycle or stabilization, as unbalanced growth cannot occur.
+  </p>
+
+  <h2>5. Discussion and Universality</h2>
+  <p>
+    This approach applies not only to Collatz but to any discrete dynamical system governed by the principle of internal exchange. The ternary system enables construction of flow diagrams, identification of cycles, and definition of universal invariants.
+  </p>
+
+  <h2>6. Conclusion</h2>
+  <blockquote>
+    The Collatz problem is not a puzzle about individual numbers, but a special case of a global balance law: in closed discrete systems, any local change is an aspect of internal redistribution, and all dynamics manifest as movements along stable cycles.
+  </blockquote>
+
+  <h2>7. MIT License Notice</h2>
+  <pre>
+Copyright (c) 2025 YEVGENIY S.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this file and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+(The MIT License text continues...)
+  </pre>
+
+  <h3>Contact & Discussion</h3>
+<p>
+  I welcome questions, collaborations, and open discussions!<br>
+  Reach out directly or join the conversation:
+</p>
+<ul style="list-style: none; padding-left: 0;">
+  <li>
+    <strong>Email:</strong>
+    <a href="mailto:info@norskstart.com" style="color: #b80606; text-decoration: underline;">info@norskstart.com</a>
+  </li>
+  <li>
+    <strong>GitHub (<span style="font-weight:normal;">issues &amp; feedback</span>):</strong>
+    <a href="https://github.com/LingNorsk" target="_blank" rel="noopener noreferrer" style="color: #b80606; text-decoration: underline;">
+      github.com/LingNorsk
+    </a>
+  </li>
+</ul>
+<p>
+  <em>I look forward to your ideas, questions, and contributions!</em>
+</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="animation.js"></script>
+</body>
+</html>
